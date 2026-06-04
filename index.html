@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
     :root{--blu:#061f55;--arancio:#ff6b12;--panna:#fffaf2;--ombra:0 18px 50px rgba(6,31,85,.16)}
@@ -24,13 +25,35 @@
     .hero{position:relative;min-height:640px;display:grid;grid-template-columns:43% 57%;align-items:center;padding:110px 0 30px 7vw}.hero:before{content:"";position:absolute;top:0;left:0;width:55%;height:100%;z-index:1;background:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 58%,rgba(255,255,255,.1) 100%),radial-gradient(circle at 18% 82%,rgba(23,163,218,.23),transparent 28%);pointer-events:none}
     .hero-visual{position:absolute;right:0;top:70px;width:64%;height:520px;overflow:hidden;border-bottom-left-radius:220px;z-index:0}.hero-visual img{width:100%;height:100%;object-fit:cover;object-position:center}.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.8),rgba(255,255,255,0) 24%)}
     .hero-text{position:relative;z-index:2;max-width:560px;padding-top:150px}h1{margin:0;font-size:clamp(4.3rem,8vw,7.5rem);line-height:.84;letter-spacing:-.04em;font-weight:700;text-shadow:0 3px 0 rgba(255,255,255,.7)}
-    .subtitle{margin:12px 0 12px 48px;color:var(--arancio);font-size:clamp(1.9rem,3vw,2.65rem);font-weight:700;text-transform:uppercase;letter-spacing:.13em}.claim{max-width:500px;margin:0;font-size:clamp(1.45rem,2.4vw,2.15rem);line-height:1.22;font-style:italic;text-align:center}.orange-line{width:300px;height:17px;margin:15px auto 0;border-bottom:4px solid var(--arancio);border-radius:50%}
+    
+    .subtitle{margin:12px 0 12px 48px;color:var(--arancio);font-size:clamp(1.9rem,3vw,2.65rem);font-weight:700;text-transform:uppercase;letter-spacing:.13em}
+    
+    .claim{max-width:500px;margin:0;font-size:clamp(1.45rem,2.4vw,2.15rem);line-height:1.22;font-style:italic;text-align:center}.orange-line{width:300px;height:17px;margin:15px auto 0;border-bottom:4px solid var(--arancio);border-radius:50%}
+    
     .wave{position:absolute;left:0;right:0;top:545px;height:135px;background:var(--panna);border-top-left-radius:70% 100%;border-top-right-radius:70% 100%;z-index:3;box-shadow:0 -18px 38px rgba(255,255,255,.55)}
-    .features{position:relative;z-index:5;width:min(1210px,78vw);margin:-38px auto 0;display:grid;grid-template-columns:repeat(6,1fr);background:rgba(255,255,255,.94);border-radius:24px;box-shadow:var(--ombra);overflow:hidden}.feature{min-height:116px;padding:18px 16px;text-align:center;display:grid;align-content:center;border-left:1px solid rgba(255,107,18,.28);font-size:1rem;line-height:1.25}.feature:first-child{border-left:0}.feature .icon{color:var(--arancio);font-size:2.2rem;line-height:1;margin-bottom:8px;font-family:Arial,sans-serif}
-    section{position:relative;z-index:4;padding:46px 7vw}.welcome{display:grid;grid-template-columns:330px 1fr;gap:44px;align-items:start;padding-top:24px;background:linear-gradient(90deg,rgba(255,244,223,.95),rgba(255,255,255,.7))}.tower{position:absolute;left:4vw;top:60px;opacity:.22;font-size:16rem;color:var(--arancio);line-height:1;transform:scaleX(.72);pointer-events:none}.welcome-copy{position:relative;z-index:2;padding-top:20px}h2{margin:0 0 24px;color:var(--blu);font-size:clamp(2.8rem,5vw,4.2rem);font-weight:500;font-style:italic;line-height:.95}.welcome-copy p{margin:0 0 28px;font-size:1.13rem;line-height:1.7}.btn{display:inline-flex;align-items:center;gap:10px;padding:17px 28px;border-radius:12px;background:var(--arancio);color:white;text-decoration:none;font-family:Arial,sans-serif;font-weight:800;font-size:1.05rem;box-shadow:0 12px 26px rgba(255,107,18,.25)}
+    
+    
+    .features{position:relative;z-index:5;width:min(1210px,78vw);margin:-38px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));background:rgba(255,255,255,.94);border-radius:24px;box-shadow:var(--ombra);overflow:hidden}.feature{min-height:116px;padding:18px 16px;text-align:center;display:grid;align-content:center;border-left:1px solid rgba(255,107,18,.28);font-size:1rem;line-height:1.25}.feature:first-child{border-left:0}.feature .icon{color:var(--arancio);font-size:2.2rem;line-height:1;margin-bottom:8px;font-family:Arial,sans-serif}
+    
+    
+    section{position:relative;z-index:4;padding:46px 7vw}.welcome{display:grid;grid-template-columns:330px 1fr;gap:44px;align-items:start;padding-top:24px;background:linear-gradient(90deg,rgba(255,244,223,.95),rgba(255,255,255,.7))}.tower{position:absolute;left:4vw;top:60px;opacity:.22;font-size:16rem;color:var(--arancio);line-height:1;transform:scaleX(.72);pointer-events:none}.welcome-copy{position:relative;z-index:2;padding-top:20px}h2{margin:0 0 24px;color:var(--blu);font-size:clamp(2.8rem,5vw,4.2rem);font-weight:500;font-style:italic;line-height:.95}.welcome-copy p{margin:0 0 28px;font-size:1.13rem;line-height:1.7}
+    
+    
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:17px 28px;border-radius:12px;background:var(--arancio);color:white;text-decoration:none;font-family:Arial,sans-serif;font-weight:800;font-size:1.05rem;box-shadow:0 12px 26px rgba(255,107,18,.25)}
+    .social-links{display:flex;justify-content:center;align-items:center;gap:15px;flex-wrap:wrap;margin-top:25px}.social-links .btn{min-width:180px}.social-map{background:#ffffff;color:#061f55}.social-instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#ffffff}.social-links i{font-size:1.15rem}
+    .whatsapp-btn{background:#25D366;color:#ffffff}
+
+    .booking-btn{background:#ff6b12;color:#fff}.booking-btn:hover{background:#e85d00;transform:translateY(-2px)}.whatsapp-btn{background:#25D366;color:#fff}.whatsapp-btn:hover{background:#1ebe5d;transform:translateY(-2px)}
+
     .gallery-grid{display:grid;grid-template-columns:1.15fr .67fr .82fr;grid-auto-rows:146px;gap:16px}.gallery-item{overflow:hidden;border-radius:14px;box-shadow:0 10px 28px rgba(6,31,85,.12);background:#fff}.gallery-item img{width:100%;height:100%;object-fit:cover}.gallery-item.big{grid-row:span 2;border-radius:18px}
     .info{padding-top:30px;padding-bottom:80px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;background:linear-gradient(180deg,#fffaf2,#fff)}.card{padding:28px;border-radius:22px;background:white;box-shadow:0 14px 42px rgba(6,31,85,.09);border:1px solid rgba(255,107,18,.16)}.card h3{margin:0 0 12px;color:var(--arancio);font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:1rem}.card p{margin:0;line-height:1.65;font-size:1.04rem}
-    .contact{background:var(--blu);color:white;text-align:center;padding:70px 7vw}.contact h2{color:white}.contact p{max-width:780px;margin:0 auto 26px;font-size:1.15rem;line-height:1.7}footer{padding:26px 7vw;background:#05173c;color:rgba(255,255,255,.78);text-align:center;font-family:Arial,sans-serif;font-size:.9rem}
+    .contact{background:var(--blu);color:white;text-align:center;padding:70px 7vw}
+    
+    .contact h2{color:#fff;font-family:'Great Vibes',cursive;font-size:clamp(3.2rem,6vw,5.3rem);font-weight:400;line-height:.9;text-shadow:0 2px 8px rgba(255,255,255,.15),0 0 20px rgba(255,255,255,.08)}
+    
+    .contact p{max-width:780px;margin:0 auto 26px;font-size:1.15rem;line-height:1.7}footer{padding:26px 7vw;background:#05173c;color:rgba(255,255,255,.78);text-align:center;font-family:Arial,sans-serif;font-size:.9rem}
+    .credits{margin-top:10px;font-size:.85rem;opacity:.85}.credits a{color:var(--arancio);text-decoration:none;font-weight:700;transition:.3s}.credits a:hover{opacity:.8;text-decoration:underline}
+    
     @media(max-width:1100px){.nav{grid-template-columns:260px 1fr auto;padding-left:4vw;padding-right:4vw}.logo-overlay{width:245px;height:200px}.menu{gap:18px;font-size:1.05rem}.features{width:92vw}.welcome{grid-template-columns:1fr}.welcome-copy{max-width:700px}}
     @media(max-width:850px){.nav{position:relative;grid-template-columns:1fr auto;background:rgba(255,255,255,.92);padding-bottom:14px}.logo-overlay{width:220px;height:180px}.menu{display:none}.book-top{font-size:.9rem;padding:12px 16px}.hero{min-height:auto;display:block;padding:28px 6vw 70px}.hero:before{width:100%}.hero-visual{position:relative;top:auto;width:100%;height:320px;border-radius:28px;margin-top:18px;z-index:2}.hero-text{padding-top:15px}h1{font-size:clamp(4.2rem,16vw,6rem)}.subtitle{margin-left:0}.claim{text-align:left}.orange-line{margin-left:0}.wave{display:none}.features{margin-top:-38px;grid-template-columns:repeat(2,1fr)}.feature{border-top:1px solid rgba(255,107,18,.18)}section{padding:52px 6vw}.welcome{gap:26px}.gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.gallery-item.big{grid-column:span 2}.info{grid-template-columns:1fr}}
     @media(max-width:520px){.nav{grid-template-columns:1fr}.book-top{justify-self:start}.logo-overlay{width:190px;height:155px}.logo-text strong{white-space:normal;font-size:3.2rem}.logo-text em{white-space:normal;font-size:1.8rem}.features{grid-template-columns:1fr;margin-top:0;border-radius:0;width:100%}.gallery-grid{grid-template-columns:1fr}.gallery-item.big{grid-column:auto}}
@@ -47,7 +70,7 @@
     </span>
   </a>
   <nav class="menu" aria-label="Navigazione principale">
-    <a class="active" href="#">Home</a><a href="#casa">La Casa</a><a href="#servizi">Servizi</a><a href="#sanvito">San Vito</a><a href="#dintorni">Dintorni</a><a href="#contatti">Contatti</a>
+    <a class="active" href="#">Home</a><a href="#casa">La Casa</a><a href="#servizi">Servizi</a><a href="#sanvito">San Vito</a><!--<a href="#dintorni">Dintorni</a>--><a href="#contatti">Contatti</a>
   </nav>
   <a class="book-top" href="https://www.airbnb.it/rooms/1697033572177027171?unique_share_id=cd77a02f-53cc-4e00-bccd-5b3cbc2f00af&viralityEntryPoint=1&s=76&source_impression_id=p3_1780296394_P3U3zzwlOXMz4YsE">▣ Prenota ora</a>
 </header>
@@ -64,7 +87,8 @@
     <div class="feature"><div class="icon">⌖</div>Centro storico<br>Piazzetta Leonardo Leo</div>
     <div class="feature"><div class="icon">♒</div>7 km<br>dal mare</div>
     <div class="feature"><div class="icon">⌂</div>Casa accogliente<br>e confortevole</div>
-    <div class="feature"><div class="icon">≋</div>Colazione<br>Gratuita</div>
+    <div class="feature"><div class="icon">🐾</div>Animali domestici<br>ammessi</div>
+    <div class="feature"><div class="icon">☕</div>Colazione<br>inclusa</div>
     <div class="feature"><div class="icon">❄</div>Aria condizionata<br>e Riscaldamento</div>
     <div class="feature"><div class="icon">☷</div>Ospiti<br>Fino a 4 persone</div>
   </aside>
@@ -73,7 +97,7 @@
     <div class="welcome-copy">
       <h2>Benvenuti a<br>Bella Vista</h2>
       <p>Una casa vacanze elegante e luminosa situata nel cuore di San Vito dei Normanni, proprio sulla caratteristica piazzetta dedicata al musicista <strong>Leonardo Leo</strong>.</p>
-      <a class="btn" href="#contatti">♡ Scopri di più</a>
+      <a class="btn" href="lacasa.html">♡ Scopri di più</a>
     </div>
     <div class="gallery-grid" aria-label="Galleria fotografica">
       <figure class="gallery-item big"><img src="assets/balcone.jpg" alt="Balcone"></figure>
@@ -89,11 +113,62 @@
     <article class="card" id="dintorni"><h3>Codici struttura</h3><p>CIS: BR07401791000077261<br>CIN: IT074017C200125876</p></article>
   </section>
   <section class="contact" id="contatti">
-    <h2>Prenota Bella Vista</h2><p>Inserisci qui i tuoi contatti reali: telefono, email, WhatsApp o link Booking/Airbnb.</p>
-    <a class="btn" href="https://wa.me/393494776818" target="_blank" rel="noopener">Contatta su WhatsApp</a>
+
+    <h2>Prenota il tuo soggiorno</h2>
+
+    <p>
+        Lasciati cullare dalla bellezza della Puglia. Prenota ora il tuo soggiorno a Bella Vista e preparati a vivere una vacanza da sogno.
+    </p>
+
+    <div class="social-links">
+
+        <a class="btn booking-btn"
+          href="https://www.airbnb.it/rooms/1697033572177027171?unique_share_id=cd77a02f-53cc-4e00-bccd-5b3cbc2f00af&viralityEntryPoint=1&s=76&source_impression_id=p3_1780296394_P3U3zzwlOXMz4YsE">
+            <i class="fa-solid fa-calendar-check"></i>
+            Prenota Ora
+        </a>
+
+        <a class="btn whatsapp-btn"
+          href="https://api.whatsapp.com/send/?phone=393494776818&text&type=phone_number&app_absent=0"
+          target="_blank"
+          rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp
+        </a>
+
+        <a class="btn social-map"
+          href="https://www.google.com/maps/place/Bella+Vista+Casa+Vacanze/@40.6581825,17.7020754,17z/data=!3m1!4b1!4m6!3m5!1s0x134667d0c00862f7:0x8c075920429a6bcf!8m2!3d40.6581825!4d17.7020754!16s%2Fg%2F11zc3f5gbc?hl=it&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener">
+            <i class="fa-solid fa-location-dot"></i>
+            Google Maps
+        </a>
+
+        <a class="btn social-instagram"
+          href="https://www.instagram.com/bella_vista.booking?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          target="_blank"
+          rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+        </a>
+
+    </div>
   </section>
 </main>
-<footer>© 2026 Bella Vista · Casa Vacanze · San Vito dei Normanni · 7 km dal mare</footer>
+
+<footer>
+    <div>
+        © 2026 Bella Vista · Casa Vacanze · San Vito dei Normanni · 7 km dal mare
+    </div>
+
+    <div class="credits">
+        Sito web realizzato da
+        <a href="https://metazenvr.it" target="_blank" rel="noopener">
+            MetazenVR
+        </a>
+    </div>
+</footer>
+
 </div>
 </body>
 </html>
