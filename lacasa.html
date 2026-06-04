@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Casa | Bella Vista Casa Vacanze</title>
+<meta name="description" content="Scopri Bella Vista, casa vacanze nel centro storico di San Vito dei Normanni con volte a stella, balcone sulla piazzetta, colazione inclusa e comfort moderni.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{--blu:#061f55;--arancio:#ff6b12;--panna:#fffaf2;--ombra:0 18px 50px rgba(6,31,85,.16)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--blu);background:linear-gradient(180deg,#eef8ff 0%,#fff4dd 45%,#fffaf2 100%);font-family:Georgia,"Times New Roman",serif}img{max-width:100%;display:block}a{color:inherit}
+.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 7vw;background:rgba(255,250,242,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,107,18,.18)}.brand{text-decoration:none;line-height:.8}.brand strong{display:block;font-family:"Great Vibes",cursive;font-size:3.2rem;font-weight:400;color:var(--blu);white-space:nowrap}.brand span{display:block;margin-top:8px;font-family:"Tangerine",cursive;font-size:1.85rem;color:var(--arancio);white-space:nowrap;text-align:center}.menu{display:flex;gap:28px;font-weight:700}.menu a{text-decoration:none}.menu a:hover,.menu a.active{color:var(--arancio)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:12px;background:var(--arancio);color:white;text-decoration:none;font-family:Arial,sans-serif;font-weight:800;box-shadow:0 12px 26px rgba(255,107,18,.25)}
+.hero{padding:92px 7vw 82px;background:radial-gradient(circle at 78% 18%,rgba(255,107,18,.22),transparent 28%),linear-gradient(135deg,#fffaf2,#eef8ff)}.hero-inner{display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}h1{margin:0 0 22px;font-family:"Great Vibes",cursive;font-size:clamp(4.6rem,9vw,8rem);font-weight:400;line-height:.82;color:var(--blu)}
+
+.subtitle{margin:0 0 22px;font-family:"Tangerine",cursive;font-size:clamp(2.1rem,4vw,3.4rem);font-weight:700;color:var(--arancio)}
+
+.lead{max-width:760px;font-size:1.25rem;line-height:1.75;margin:0}.hero-card{border-radius:34px;background:white;padding:14px;box-shadow:var(--ombra);overflow:hidden}.hero-card img{border-radius:24px;width:100%;height:420px;object-fit:cover}
+
+section{padding:78px 7vw}h2{margin:0 0 24px;font-family:"Great Vibes",cursive;font-size:clamp(3.2rem,6vw,5.3rem);font-weight:400;line-height:.9;color:var(--blu)}h3{margin:0 0 14px;color:var(--arancio);font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:1rem}p,li{font-size:1.08rem;line-height:1.75}.intro{max-width:950px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}.card{background:white;border:1px solid rgba(255,107,18,.16);border-radius:24px;padding:28px;box-shadow:0 14px 42px rgba(6,31,85,.09)}.highlight{background:linear-gradient(135deg,#fffaf2,#fff);border-left:6px solid var(--arancio)}.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}.list{margin:0;padding-left:22px}
+.gallery{display:grid;grid-template-columns:1.25fr .8fr .8fr;grid-auto-rows:190px;gap:16px;margin-top:34px}.gallery figure{margin:0;border-radius:22px;overflow:hidden;background:white;box-shadow:0 14px 42px rgba(6,31,85,.1)}.gallery figure:first-child{grid-row:span 2}.gallery img{width:100%;height:100%;object-fit:cover}.cta{background:var(--blu);color:white;text-align:center}.cta h2{color:white}.cta p{max-width:800px;margin:0 auto 28px}.social-links{display:flex;justify-content:center;align-items:center;gap:15px;flex-wrap:wrap;margin-top:25px}.social-links .btn{min-width:180px}.booking-btn{background:#ff6b12;color:#fff}.whatsapp-btn{background:#25D366;color:#fff}.social-map{background:#ffffff;color:#061f55}.social-instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#ffffff}.social-links i{font-size:1.15rem}
+
+footer{padding:28px 7vw;text-align:center;background:#05173c;color:rgba(255,255,255,.78);font-family:Arial,sans-serif;font-size:.9rem}
+
+.credits{margin-top:10px;font-size:.85rem;opacity:.85}.credits a{color:var(--arancio);text-decoration:none;font-weight:700;transition:.3s}.credits a:hover{opacity:.8;text-decoration:underline}
+
+.gallery img{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    z-index:9999;
+
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:95%;
+    border-radius:12px;
+    box-shadow:0 0 30px rgba(255,255,255,.2);
+}
+
+
+@media(max-width:900px){.hero-inner,.split,.grid{grid-template-columns:1fr}.menu{display:none}.hero-card img{height:300px}.gallery{grid-template-columns:1fr 1fr}.gallery figure:first-child{grid-column:span 2}.brand strong{font-size:2.7rem}.brand span{font-size:1.55rem}}@media(max-width:560px){section,.hero{padding:58px 6vw}.gallery{grid-template-columns:1fr}.gallery figure:first-child{grid-column:auto}.brand strong,.brand span{white-space:normal}}
+
+</style>
+</head>
+<body>
+<header class="nav">
+    <a class="brand" href="index.html">
+        <strong>Bella Vista</strong>
+        <span>Casa Vacanze</span>
+    </a>
+
+    <nav class="menu"><a href="index.html">Home</a><a class="active" href="lacasa.html">La Casa</a><a href="#galleria">Galleria</a><a href="#contatti">Contatti</a></nav><a class="btn booking-btn" href="https://www.airbnb.it/rooms/1697033572177027171?unique_share_id=cd77a02f-53cc-4e00-bccd-5b3cbc2f00af&viralityEntryPoint=1&s=76&source_impression_id=p3_1780296394_P3U3zzwlOXMz4YsE"><i class="fa-solid fa-calendar-check"></i>Prenota ora</a></header>
+<main>
+<section class="hero"><div class="hero-inner"><div><h1>La Casa</h1><div class="subtitle">Il tuo angolo di paradiso nel cuore della Puglia</div><p class="lead">Benvenuti a <strong>Bella Vista</strong>, un’elegante casa vacanze nel centro storico di San Vito dei Normanni. Tra splendide volte a stella, dettagli curati e comfort moderni, la struttura unisce il fascino della tradizione pugliese alla comodità di un soggiorno contemporaneo.</p></div><div class="hero-card"><img src="assets/balcone.jpg" alt="Balcone Bella Vista Casa Vacanze"></div></div></section>
+<section><h2>Autenticità, comfort e accoglienza</h2><p class="intro">Bella Vista è la scelta ideale per coppie, famiglie o amici che desiderano vivere una vacanza autentica, rilassante e indimenticabile. La casa può ospitare fino a <strong>4 persone</strong> ed è arredata con toni caldi, dettagli floreali e ambienti pensati per trasmettere freschezza, eleganza e benessere.</p><div class="grid"><article class="card highlight"><h3><i class="fa-solid fa-house"></i> Volte a stella</h3><p>Architettura tipica pugliese, atmosfera storica e ambienti luminosi dal grande fascino.</p></article><article class="card highlight"><h3><i class="fa-solid fa-users"></i> Fino a 4 ospiti</h3><p>Perfetta per una coppia, una famiglia o un piccolo gruppo di amici.</p></article><article class="card highlight"><h3><i class="fa-solid fa-mug-hot"></i> Colazione inclusa</h3><p>Macchina del caffè con capsule e tutto il necessario per iniziare bene la giornata.</p></article></div></section>
+<section><div class="split"><div><h2>Una posizione strategica</h2><p>Soggiornare a Bella Vista significa avere la Puglia a portata di mano. La casa si trova in una posizione privilegiata, comoda per vivere il paese a piedi e partire alla scoperta delle mete più amate del territorio.</p></div><div class="card"><ul class="list"><li><strong>Piazza principale a pochi passi:</strong> in circa due minuti a piedi si raggiunge il cuore della città e il Castello Dentice di Frasso.</li><li><strong>Bar sotto casa:</strong> sulla piazzetta accanto all’appartamento, perfetto per caffè, cappuccino o un pasticciotto caldo.</li><li><strong>Aeroporto di Brindisi:</strong> a circa 20 km.</li><li><strong>Torre Guaceto:</strong> a circa 15 km, tra spiagge dorate, natura incontaminata e mare cristallino.</li><li><strong>Dintorni:</strong> Ostuni, Alberobello, Polignano a Mare, Monopoli, Lecce e Brindisi sono facilmente raggiungibili in auto.</li></ul></div></div></section>
+<section><h2>Gli spazi</h2><div class="grid"><article class="card"><h3>Zona giorno</h3><p>Ampio soggiorno luminoso con pavimentazione classica, comodo divano letto matrimoniale, TV da 32 pollici e aria condizionata caldo/freddo.</p></article><article class="card"><h3>Camera matrimoniale</h3><p>Camera spaziosa con suggestiva volta a stella, armadio a specchio, biancheria inclusa e atmosfera intima e rilassante.</p></article><article class="card"><h3>Cucina moderna</h3><p>Cucina completamente attrezzata con piano cottura a 4 fuochi, forno, frigorifero con congelatore, lavatrice e macchina del caffè.</p></article><article class="card"><h3>Bagno</h3><p>Elegante e funzionale, dotato di ampio box doccia, lavabo con mobile in legno, wc e bidet.</p></article><article class="card"><h3>Balcone privato</h3><p>Un grazioso balcone con tavolino e sedie in ferro battuto, affacciato sulla piazzetta alberata e sulla facciata di una storica chiesa locale.</p></article><article class="card"><h3>Relax con vista</h3><p>Il luogo perfetto per una colazione al sole o per un calice di vino primitivo al tramonto, respirando la vera atmosfera pugliese.</p></article></div></section>
+<section><h2>Servizi inclusi</h2><div class="grid"><article class="card"><h3><i class="fa-solid fa-snowflake"></i> Clima</h3><p>Aria condizionata caldo/freddo.</p></article><article class="card"><h3><i class="fa-solid fa-tv"></i> TV</h3><p>TV 32 pollici per le tue serate di relax.</p></article><article class="card"><h3><i class="fa-solid fa-kitchen-set"></i> Cucina</h3><p>Cucina accessoriata, macchina del caffè con capsule e colazione inclusa.</p></article><article class="card"><h3><i class="fa-solid fa-shirt"></i> Lavatrice</h3><p>Comoda lavatrice a disposizione degli ospiti.</p></article><article class="card"><h3><i class="fa-solid fa-bed"></i> Biancheria</h3><p>Set di asciugamani e lenzuola fresche di bucato.</p></article><article class="card"><h3><i class="fa-solid fa-paw"></i> Pet friendly</h3><p>Gli animali domestici sono i benvenuti.</p></article></div></section>
+
+<section id="galleria">
+
+    <h2>Galleria immagini</h2>
+
+    <div class="gallery">
+
+        <figure>
+            <img src="assets/zona_pranzo.jpg" alt="Zona pranzo" onclick="openImage(this.src)"> 
+        </figure>
+
+        <figure>
+            <img src="assets/cucina_bv.jpg" alt="Cucina moderna" onclick="openImage(this.src)">
+        </figure>
+
+        <figure>
+            <img src="assets/camera_bv.jpg" alt="Camera matrimoniale" onclick="openImage(this.src)">
+        </figure>
+
+        <figure>
+            <img src="assets/bagno_bv.jpg" alt="Bagno" onclick="openImage(this.src)">
+        </figure>
+
+        <figure>
+            <img src="assets/piazzetta_bv.jpg" alt="Piazzetta nel centro storico" onclick="openImage(this.src)">
+        </figure>
+
+        <figure>
+            <img src="assets/ingresso_bv.jpg" alt="Ingresso" onclick="openImage(this.src)">
+        </figure>
+
+        <figure>
+            <img src="assets/balcone_sera.jpg" alt="Balcone di sera" onclick="openImage(this.src)">
+        </figure>
+
+        <figure>
+            <img src="assets/panorama.jpg" alt="Panorama" onclick="openImage(this.src)">
+        </figure>
+
+        <figure>
+            <img src="assets/trullo.jpg" alt="Trullo" onclick="openImage(this.src)">
+        </figure>
+
+         <figure>
+            <img src="assets/mare.jpg" alt="Mare" onclick="openImage(this.src)">
+        </figure>
+
+        <figure>
+            <img src="assets/ristorante.jpg" alt="Ristorante sul mare" onclick="openImage(this.src)">
+        </figure>
+
+    </div>
+
+</section>
+
+<section class="cta" id="contatti"><h2>Prenota il tuo soggiorno</h2><p>Lasciati cullare dalla bellezza della Puglia. Prenota ora il tuo soggiorno a Bella Vista e preparati a vivere una vacanza da sogno.</p><div class="social-links"><a class="btn booking-btn" href="https://www.airbnb.it/rooms/1697033572177027171?unique_share_id=cd77a02f-53cc-4e00-bccd-5b3cbc2f00af&viralityEntryPoint=1&s=76&source_impression_id=p3_1780296394_P3U3zzwlOXMz4YsE"><i class="fa-solid fa-calendar-check"></i>Prenota ora</a><a class="btn whatsapp-btn" href="https://api.whatsapp.com/send/?phone=393494776818&text&type=phone_number&app_absent=0" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a><a class="btn social-map" href="https://www.google.com/maps/place/Bella+Vista+Casa+Vacanze/@40.6581825,17.7020754,17z/data=!3m1!4b1!4m6!3m5!1s0x134667d0c00862f7:0x8c075920429a6bcf!8m2!3d40.6581825!4d17.7020754!16s%2Fg%2F11zc3f5gbc?hl=it&entry=ttu" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i>Google Maps</a><a class="btn social-instagram" href="https://www.instagram.com/bella_vista.booking?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i>Instagram</a></div></section>
+
+</main>
+
+<footer>
+    <div>
+        © 2026 Bella Vista · Casa Vacanze · San Vito dei Normanni · 7 km dal mare
+    </div>
+
+    <div class="credits">
+        Sito web realizzato da
+        <a href="https://metazenvr.it" target="_blank" rel="noopener">
+            MetazenVR
+        </a>
+    </div>
+</footer>
+
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function openImage(src){
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeImage(){
+    document.getElementById('lightbox').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
